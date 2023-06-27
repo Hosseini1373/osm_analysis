@@ -1,0 +1,51 @@
+<mvc:View controllerName="sap.ui.core.sample.RoutingNestedComponent.reuse.products.controller.List"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	displayBlock="true">
+
+	<Page id="page"
+		showHeader="false"
+		enableScrolling="true"
+		class="sapUiContentPadding categoriesPage">
+
+
+	<subHeader>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<ComboBox 
+				id="box0"
+				items="{ path: 'amenities>/'}"
+				selectedKey="Laboratory"
+				selectionChange="onChange">
+					<core:Item key="{amenities>Name}" text="{amenities>Name}" />
+			</ComboBox>
+				<!-- <Select
+					forceSelection="true"
+					change="onChange"
+					id="Select0"
+					selectedKey="{SelectedProduct}"
+					items="{
+						path: '/amenities',
+						sorter: { path: 'Name' }
+					}">
+					<core:Item key="{ProductId}" text="{Name}" />
+				</Select> -->
+			</Toolbar>
+		</subHeader>
+		<content>
+
+		<core:HTML afterRendering="onDrawMap" content="&lt;div id=&quot;myMap&quot;&gt;&lt;/div &gt;"></core:HTML> 
+		</content>  
+
+	</Page>
+
+</mvc:View>
+
+
+
+
+
+
+
+

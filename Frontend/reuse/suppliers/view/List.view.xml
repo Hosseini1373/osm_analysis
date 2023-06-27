@@ -1,0 +1,32 @@
+<mvc:View controllerName="sap.ui.core.sample.RoutingNestedComponent.reuse.suppliers.controller.List"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	displayBlock="true">
+	<Page id="page"
+		showHeader="false"
+		enableScrolling="true"
+		class="sapUiContentPadding suppliersPage">
+		<ComboBox
+				id="box1"
+				items="{ path: 'amenities>/'}"
+				selectedKey="Laboratory"
+				selectionChange="onChange">
+					<core:Item key="{amenities>Name}" text="{amenities>Name}" />
+		</ComboBox>
+		<TileContainer
+			id="container"
+			tileDelete="handleTileDelete"
+			tiles="{/TileCollection}">
+			<StandardTile
+				icon="{icon}"
+				type="{type}"
+				number="{number}"
+				numberUnit="{numberUnit}"
+				title="{title}"
+				info="{info}"
+				infoState="{infoState}" />
+		</TileContainer>
+
+	</Page>
+</mvc:View>

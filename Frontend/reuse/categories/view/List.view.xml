@@ -1,0 +1,26 @@
+<mvc:View controllerName="sap.ui.core.sample.RoutingNestedComponent.reuse.categories.controller.List"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:c="sap.ui.core"
+	xmlns="sap.m"
+	displayBlock="true">
+
+	<Page id="page"
+		showHeader="false"
+		enableScrolling="true"
+		class="sapUiContentPadding categoriesPage">
+
+
+
+		<content>
+
+		<c:HTML afterRendering="onRender" content="&lt;canvas id=&quot;myChart&quot;&gt;&lt;/canvas &gt;"></c:HTML>
+		</content>  
+
+	</Page>
+
+</mvc:View>
+
+
+
+
+
